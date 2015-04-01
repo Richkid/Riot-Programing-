@@ -9,13 +9,17 @@ void setup()
  
  }
  
- Void loop ()
+    Void loop ()
  
- {
+   {
  
- int val = digital read (inputPin); 
- if (val == HIGH) 
- {
- DigitalWrite(ledPin , HIGH ); 
- } 
+     int val = digital read (inputPin); 
+     if (val == HIGH) 
+    {
+      DigitalWrite(ledPin , HIGH ); 
+    } 
+      else
+      {
+      digitalWrite(ledPin, LOW);
+      }
  }
