@@ -1,0 +1,36 @@
+int  j; 
+int i ;
+
+void Setup()
+ { 
+  Serial.begin(9600); 
+  
+  }
+  
+void loop()
+
+   {
+    Serial.print (" i = " ); 
+    Serial.print (i); 
+    Serial.print (" and j = ")
+    Serial.ln (j); 
+    
+     if( i < j ) 
+      Serial.println(" i is less than j ");
+     if(i <= j) Serial.println(" i is less than or equal to j ");
+     if(i != j) 
+      Serial.println( " i is not equal to j");
+    if(i == j)
+      Serial.println(" i is equal to j");
+    if (i >= j) 
+      Serial.println( " i is greater than or equal to j ") ;
+    if( i > j ) 
+      Serial.println ( " i is greater than j " ); 
+      
+      Serial.println(); 
+      i = i+1;
+      if (i > j +) 
+        delay(1000);  // long delay after i is no longer close to j
+        } 
+      
+      
