@@ -1,0 +1,12 @@
+
+
+while(analogRead(sensorPin) > 100 )
+  {
+    if ( digitalRead(switchPin) == HIGH)
+    {
+     break; //exit the loop 
+     }
+     
+     flashLED();
+     
+     }
