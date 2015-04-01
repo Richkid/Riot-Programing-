@@ -1,0 +1,49 @@
+int LedPin = 13;
+
+void setup ()
+
+  {
+   Serial.begin(9600);
+   
+   pinMode( Ledpin , OUTPUT); 
+   
+   }
+   
+     void loop()
+     
+    { 
+     if (Serial.avaiable()) // check to see if at least one character is free 
+     
+     {
+      char ch = Serial.read(); // ch is a variable recieved from the signal port 
+       switch(ch)
+       {
+        case '1':
+         blink ();
+         break;
+         
+       case '2':
+         blink();
+         blink();
+         break;
+       case '+'
+         digitalWrite(ledPin, HIGH);
+         break;
+       case '-':
+         digitalWrite(ledPin , LOW);
+         
+       default:
+        Serial.print(ch); 
+        Serial.println(" was received but not expected");
+        break;
+        }
+      }  
+  }
+void blink()
+
+{ 
+digitalWrite(ledPin, HIGH);
+delay (500);
+digitalWrite(ledPin ,LOW);
+delay (500);
+}
