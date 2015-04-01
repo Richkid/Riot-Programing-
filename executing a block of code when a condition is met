@@ -1,0 +1,21 @@
+const int ledPin = 13;   // choose a pin for led 
+const int input pin =2; // chose a the pin (for push buttons) 
+
+
+void setup()
+{ 
+ pinMode(ledPin , OUTPUT);
+ pinMode(inputPin , INPUT); 
+ 
+ }
+ 
+ Void loop ()
+ 
+ {
+ 
+ int val = digital read (inputPin); 
+ if (val == HIGH) 
+ {
+ DigitalWrite(ledPin , HIGH ); 
+ } 
+ }
