@@ -1,0 +1,28 @@
+
+int ledPin = 13; 
+int sensorPin = 0;
+
+void setup()
+{
+    Serial.begin(9600) ; 
+    pinMode (ledPin , OUTPUT) ; 
+}   
+      void loop()
+      {
+       while(analogRead(sensorPin) > 100) 
+       { 
+        Blink();   // a function is just called to operate , wow im seeingit now // 
+        Serial.println(" . "); 
+        }
+        
+        Serial.println( analogRead(sensorPin)); // not excuted untill the while loop finishes 
+        } 
+        
+        void blink ()
+        
+        {
+        digital Write(ledPin, HIGH); 
+        delay (100); 
+        digital write (ledpin , LOW); 
+        delay (100); 
+        }
