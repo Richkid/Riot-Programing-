@@ -47,3 +47,4 @@ delay (500);
 digitalWrite(ledPin ,LOW);
 delay (500);
 }
+//if situation is x execute case n ... 
