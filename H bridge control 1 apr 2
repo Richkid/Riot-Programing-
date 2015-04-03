@@ -1,0 +1,79 @@
+const int enPin2 = 5; // pwm
+const int enPin  = 3; // pwm 
+const int in1Pin = 4; 
+const int in2Pin = 7;
+const int in4Pin = 12; 
+const int in3Pin = 8;
+const int enPin3 = 9;
+const int in1_Pin = 13;
+const int in2_Pin =11;
+const int enPin4 = 10;
+const int in3_Pin = 3;
+const int in4_Pin =2 ;
+ void setup ()
+  {
+    Serial.begin(9600);
+    pinMode (in1Pin,OUTPUT);
+    pinMode (in2Pin, OUTPUT);
+    pinMode (in3Pin, OUTPUT);
+    pinMode (in4Pin, OUTPUT); 
+    pinMode (in1_Pin, OUTPUT);
+    pinMode (in2_Pin, OUTPUT);
+    pinMode (in3_Pin , OUTPUT);
+    pinMode (in4_Pin, OUTPUT);
+    Serial.println("speed (0-9)");
+    
+  }
+  
+  void loop()
+{
+    if (Serial.available()) 
+      {
+      char ch = Serial.read();
+      if (isDigit(ch))
+      
+      {
+        int speed = map(ch, '0' , '9', 0, 225);
+        //int speed1= map(ch, '0' , '8' , 0 ,224);
+        analogWrite(enPin, speed);
+        analogWrite(enPin2, speed);
+        analogWrite(enPin3 , speed);
+        analogWrite(enPin4, speed);
+        Serial.println(speed) ; 
+        //Serial.println(speed1) ;
+      }
+      
+      else if (ch == '+')
+      {
+        Serial.println( "cw"); 
+        digitalWrite (in1Pin , HIGH) ; 
+        digitalWrite (in2Pin, LOW) ; 
+        digitalWrite (in4Pin, LOW);
+        digitalWrite (in3Pin, HIGH);
+        digitalWrite (in1_Pin , LOW) ; 
+        digitalWrite (in2_Pin, HIGH) ; 
+        digitalWrite (in4_Pin, HIGH);
+        digitalWrite (in3_Pin, LOW);
+      }
+      
+      else if (ch == '-') 
+      {
+        
+        Serial.println('CCW');
+        digitalWrite (in1Pin, HIGH);
+        digitalWrite (in2Pin, LOW); 
+        digitalWrite (in4Pin, HIGH);
+        digitalWrite (in3Pin, LOW);
+        digitalWrite (in1_Pin, LOW);
+        digitalWrite (in2_Pin, HIGH); 
+        digitalWrite (in4_Pin, LOW);
+        digitalWrite (in3_Pin, HIGH);
+        
+      }
+     else
+      {
+        Serial.print("Unexpected characteristics");
+        Serial.println(ch);
+      }
+    }
+  }
