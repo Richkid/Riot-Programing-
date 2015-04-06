@@ -1,0 +1,98 @@
+#include "AFMotor.h"  // sheild library 
+ AF_DCMotor M1 (1 , MOTOR12_1KHZ); 
+ AF_DCMotor M2 ( 2 , MOTOR12_1KHZ); 
+ 
+ #define MIN_PWM 64
+ #define MAX_PWM 128
+ 
+ int Mega_signal =  // awaking digital signal from Mega anology output function
+ 
+ /*Serial.Print ( "tack") ; 
+   motor.run(RELEASE);
+   delay(1000) */
+
+void setup() {
+motor.setSpeed (200); 
+Serial.begin(9600)
+pinMode ( Mega_signal , INPUT );// put your setup code here, to run once:
+Serial.println ( " Stider Etch Sketch Control Software " ) 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+Serial.print( "tick " ) ;
+
+M1.run(FORWARD); 
+delay (2000); 
+
+Serial.print ( " Tock nigga" );
+M1.run(BACKWARD); 
+delay ( 1000) ; 
+
+M2.run(FORWARD); 
+delay (4000); 
+
+M1.run(BACKWARD); 
+delay (2000); 
+
+M1.run(FORWARD); 
+delay (4000); 
+
+M1.run(FORWARD);
+delay (3000);
+
+M1.run(BACKWARD); 
+delay(2000); 
+
+M2.BACKWARD)
+delay(4000); 
+
+M1.run(FORWARD); 
+delay (2000); 
+
+M1.run(BACKWARD);
+delay(2000);
+
+M2.run(BACKWARD); 
+delay(2000); 
+
+M1.run(FORWARD); 
+delay(2000)
+
+M1.run(FORWARD); 
+delay(3000); 
+
+M2.run(FORWARD); 
+delay(2000); 
+
+M1.run(FORWARD);
+delay(2000); 
+
+M1.run(BACKWARD);
+delay(2000);
+
+M2.run(BACKWARD);
+delay(4000);
+
+M1.run(FORWARD);
+delay(4000);
+
+M1.run(BACKWARD); 
+delay(2000);
+
+M2.run(FORWARD); 
+delay(2000) ; 
+
+M1.run(FORWARD); 
+delay(2000); 
+
+M1.run(BACKWARD); 
+delay(2000); 
+
+M2.run(FORWARD) ; 
+delay (2000); 
+
+M1.run(FORWARD); 
+delay(2000); 
+
+}
