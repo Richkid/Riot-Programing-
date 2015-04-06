@@ -23,107 +23,141 @@ void loop()
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay (2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay ( 1000) ;
+        M1.run(RELEASE);
+        
         
         Serial.print( "tick " ) ;
         M2.run(FORWARD);
         delay (4000);
+        M2.run(RELEASE);
+        
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay (2000);
+        M1.run(RELEASE);
+        
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay (4000);
+        M1.run(RELEASE);
+       
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay (3000);
+        M1.run(RELEASE);
+       
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M2.run(BACKWARD);
         delay(4000);
+        M2.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay (2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay(2000);
+        M1.run(RELEASE);
+        
         
         Serial.print ( " Tock nigga" );
         M2.run(BACKWARD);
         delay(2000);
+        M2.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay(3000);
-        
+        M1.run(RELEASE); 
+           
         Serial.print( "tick " ) ;
         M2.run(FORWARD);
         delay(2000);
+        M2.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M2.run(BACKWARD);
         delay(4000);
+       M2.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay(4000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M2.run(FORWARD);
         delay(2000) ;
+        M2.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M1.run(FORWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print ( " Tock nigga" );
         M1.run(BACKWARD);
         delay(2000);
+        M1.run(RELEASE);
         
         Serial.print( "tick " ) ;
         M2.run(FORWARD) ;
         delay (2000);
+        M2.run(RELEASE);
         
         Serial.print( "tack " ) ;
         M1.run(FORWARD);
         delay(2000); 
+        M1.run(RELEASE);
+       
+       
         
         Serial.print("tack");
         M1.run(RELEASE); // stopped
         delay(1000);
         
+        
          Serial.print("tack");
         M2.run(RELEASE); // stopped
         delay(1000);
-
+       
+ 
 
 
 }
