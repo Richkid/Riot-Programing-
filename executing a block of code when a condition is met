@@ -1,5 +1,5 @@
 const int ledPin = 13;   // choose a pin for led 
-const int input pin =2; // chose a the pin (for push buttons) 
+const int inputpin =2; // chose a the pin (for push buttons) 
 
 
 void setup()
